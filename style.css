@@ -155,7 +155,7 @@ body {
     display: none;
   }
   .main .navigation {
-    width: 80%;
+    width: 72%;
     height: 50px;
     z-index: 1;
     opacity: 1;
@@ -182,7 +182,7 @@ body {
     width: 450px;
     height: 200px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 150px;
     margin-left: 10%;
   }
   .content img {
@@ -202,7 +202,7 @@ body {
 }
 @media (min-width: 1236px) {
   .content {
-    margin-left: 15%;
+    margin-left: 20%;
   }
   .content .slider > .slides > img {
     display: block;
