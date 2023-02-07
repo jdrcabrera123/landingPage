@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Arvo", sans-serif;
+}
+
+body {
+  background-color: #12001e;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  height: 60px;
+}
+.main a > img {
+  width: 100px;
+  padding: 10px;
+  margin-left: 10px;
+}
+.main .toggle {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 15px;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main .toggle::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  background: white;
+  height: 3px;
+  width: 30px;
+  box-shadow: 0 10px 0 white;
+  transition: 0.5s;
+}
+.main .toggle::after {
+  content: "";
+  position: absolute;
+  transform: translateY(12px);
+  background: white;
+  height: 3px;
+  width: 30px;
+  transition: 0.5s;
+}
+.main .toggle.active::before {
+  transform: translateY(10px) rotate(45deg);
+  box-shadow: none;
+}
+.main .toggle.active::after {
+  transform: translateY(1px) rotate(-45deg);
+}
+.main .navigation {
+  position: absolute;
+  background: #12001e;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0;
+  font-size: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.5s;
+}
+.main .navigation a {
+  color: white;
+  text-decoration: none;
+}
+.main .navigation.active {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.content {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: 100vh;
+}
+.content img {
+  display: none;
+}
+.content p {
+  font-size: 2.5rem;
+  line-height: 40px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.content .btn {
+  margin-top: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Watch Now";
+  width: 250px;
+  height: 60px;
+  font-size: 2rem;
+  border-radius: 40px;
+  background: hsl(342deg, 75%, 35%);
+  background: linear-gradient(45deg, hsl(342deg, 75%, 35%) 0%, hsl(15deg, 100%, 37%) 100%);
+  background: -webkit-linear-gradient(45deg, hsl(342deg, 75%, 35%) 0%, hsl(15deg, 100%, 37%) 100%);
+  border: none;
+  transition: 0.5s;
+}
+.content .btn:hover {
+  width: 300px;
+}
+.content .slider > .slides > img {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  body {
+    background: #12001e;
+  }
+  .content p {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+  .content .btn::before {
+    margin-top: 50px;
+    width: 180px;
+    height: 60px;
+    border-radius: 40px;
+  }
+}
+@media (min-width: 991px) {
+  .main {
+    display: flex;
+  }
+  .main a > img {
+    display: none;
+  }
+  .main .toggle {
+    display: none;
+  }
+  .main .navigation {
+    width: 80%;
+    height: 50px;
+    z-index: 1;
+    opacity: 1;
+    font-size: 4.5rem;
+    position: absolute;
+    left: 10%;
+    top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-decoration: none;
+    gap: 85px;
+  }
+  .main .navigation a {
+    transition: 0.2s;
+  }
+  .main .navigation a:hover {
+    font-size: 2rem;
+    color: #ee9954;
+  }
+  .content {
+    position: relative;
+    width: 450px;
+    height: 200px;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 10%;
+  }
+  .content img {
+    display: block;
+  }
+  .content p {
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+  }
+  .content .slider > .slides > img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 125%;
+    width: 300px;
+  }
+}
+@media (min-width: 1236px) {
+  .content {
+    margin-left: 15%;
+  }
+  .content .slider > .slides > img {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 155%;
+    width: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */
